@@ -20,7 +20,6 @@ function App() {
     const sendMessage = (e) => {
         e.preventDefault();
         if (input) {
-            setMessages((prevMessages) => [...prevMessages, input]);
             socket.emit('chat message', input);
             setInput('');
         }
